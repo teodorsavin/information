@@ -26,8 +26,8 @@ class InformationFormRequest extends FormRequest
         return [
             'first_name'            => 'required|min:3',
             'last_name'             => 'required|min:3',
-            'email'                 => 'required|email|unique:email',
-            'bsn'                   => 'required|min:3|unique:bsn',
+            'email'                 => 'required|min:3|unique:information',
+            'bsn'                   => 'required|min:3|unique:information',
             'credit_card_number'    => 'required|min:3',
             'civ'                   => 'required|min:3'
         ];
