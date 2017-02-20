@@ -54,6 +54,7 @@ class InformationController extends Controller
             'IBAN'               => $request->get('iban'),
             'credit_card_number' => $request->get('credit_card_number'),
             'civ'                => $request->get('civ'),
+            'user_id'            => Auth::user()->id,
             'slug'               => $slug
         ]);
         $information->save();
@@ -114,6 +115,7 @@ class InformationController extends Controller
         $information->IBAN                  = $request->get('iban');
         $information->credit_card_number    = $request->get('credit_card_number');
         $information->civ                   = $request->get('civ');
+        $information->user_id               = Auth::user()->id;
 
         $information->save();
 
